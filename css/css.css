@@ -1,0 +1,322 @@
+/* Fonte 'Slabo 27px' */
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* Edição conforme cada tamanho de tela (CELULAR) */
+    .ms-page-wrapper{
+        width: 100%;
+        height: 100vh;
+        display: table;
+        border: 30px solid #000;
+    }
+
+    .ms-page-wrapper-background{
+        background-color: #101010;
+    }
+
+/* Efeito degrade da página contatos ".ms-wrapper-degradar" + "@keygrame" */
+    .ms-wrapper-degradar {
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(-45deg, #4abdac, #07889b,#0375b4, #062f4f);
+        background-size: 400% 400%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: ms-background-transition 8s ease-in-out infinite;
+    }
+
+    @keyframes ms-background-transition {
+        0%{
+            background-position: 0% 80%;
+        }
+        50% {
+            background-position: 80% 100%;
+        }
+        100% {
+            background-position: 0% 90%;
+        }
+    }
+
+    .ms-topbar{
+        width: 100%;
+        height: 110px;
+        display: block;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+    }
+
+    .ms-logo{
+        width: 74px;
+        height: 110px;
+        float: left;
+        margin-left: 60px;
+        border-radius: 0 0 37px 0;
+        background-color: white;
+    }
+    
+    .ms-logo img{
+        width: 46px;
+        height: 51px;
+        display: block;
+        margin: 49px auto 0 auto;
+    }
+
+    .ms-display-text{
+        margin-top: 15%;
+    }
+
+    .ms-page-wrapper{
+        width: 100%;
+        height: 100vh;
+        display: table;
+        border: 30px solid #000;
+    }
+
+    .ms-page-wrapper-background{
+        background-color: #101010;
+    }
+
+    .ms-topbar{
+        width: 100%;
+        height: 110px;
+        display: block;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+    }
+
+    .ms-logo{
+        width: 74px;
+        height: 110px;
+        float: left;
+        margin-left: 60px;
+        border-radius: 0 0 37px 0;
+        background-color: white;
+    }
+    
+    .ms-logo img{
+        width: 46px;
+        height: 51px;
+        display: block;
+        margin: 49px auto 0 auto;
+    }
+
+    /* MENU */
+
+    .ms-menu{
+        position: absolute;
+        top: 28px;
+        right: 30px;
+        background: transparent;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 0px #0375b4;
+        z-index: -1;
+        transition: 400ms ease-in-out 0;
+    }
+
+    .ms-menu-items {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: 400ms ease-in-out 0;
+    }
+
+    .ms-menu-items ul {
+        list-style-type: none;
+    }
+
+    .ms-menu-items ul li a {
+        margin: 10px 0;
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 40px;
+    }
+
+    .ms-display-text{
+        margin-top: 15%;
+    }
+
+
+/* Classes Utilitárias de Cores */
+
+.ms-text-blue{
+    color: rgb(0, 102, 255);
+}
+
+.ms-text-dark{
+    color: #4d4c4c;
+}
+
+.ms-text-grey{
+    color: #bcbcbc;
+}
+
+.ms-text-black{
+    color: #000
+}
+
+/* Classes Utilitárias Texto */
+
+.ms-tittle{
+    font-family: 'Abril Fatface', serif;
+}
+
+.ms-full-height{
+    height: 100vh;
+   
+}
+
+.ms-title-big{
+    font-size: 120px;
+}
+
+.ms-font-slabo{
+    font-family: Slabo 27px;
+}
+
+/* Outros Utilitários */
+
+.ms-first-section{
+    height: calc(100vh - 30px);
+}
+
+/* Menu Hamburguer */
+
+.checkbox-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0;
+}
+
+.checkbox .trace {
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) {
+    top: 26px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2) {
+    top: 46px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3) {
+    top: 66px;
+    transform: rotate(0);
+}
+
+#toggle {
+    display: none;
+}
+
+   /* ANIMAÇÃO MENU */
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: #000;
+    top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translateX(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #000;
+    top: 48px;
+}
+
+/* ANIMAÇÃO BOLHA MENU */
+
+#toggle:checked + .checkbox {
+    background-color: #0375b4;
+}
+
+#toggle:checked ~ .ms-menu {
+    box-shadow: 0px 0px 0px 100vmax #0375b4;
+    z-index: 1;
+}
+
+#toggle:checked ~.ms-menu-items {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* PÁGINA CONTATOS */
+
+.ms-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.ms-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.ms-card {
+    height: 300px;
+    width: 400px;
+    margin: 3rem 0 0;
+    background-image: url('./');
+    
+}
